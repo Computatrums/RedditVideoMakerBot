@@ -10,8 +10,7 @@ PORT = 4000
 # Define class to display the index page of the web server
 class PythonServer(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
-        if self.path == "/GUI":
-            self.path = "index.html"
+        self.path = "GUI/index.html"
         return http.server.SimpleHTTPRequestHandler.do_GET(self)
 
 
